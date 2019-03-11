@@ -17,4 +17,6 @@ public class FragmentGoals extends Fragment {
         view = inflater.inflate(R.layout.goals_fragment, container, false);
         return view;
     }
+
+
 }
