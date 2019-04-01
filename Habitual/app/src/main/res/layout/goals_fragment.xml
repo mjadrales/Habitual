@@ -1,49 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="300dp"
+    android:background="@color/colorPrimaryDark"
     android:gravity="center">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="My Goals"
+        android:textColor="@color/tabTextColor"
         android:textSize="30dp"
         android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:padding="15px"
+        android:orientation="horizontal">
+
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/tabTextColor"
         android:text="Add New Goal"
+        android:paddingRight="10dp"
         android:textSize="18sp" />
 
-    <ImageButton
-        android:id="@+id/add_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:background="@color/tabIndicatorColor"
-        android:clickable="true"
-        android:src="@drawable/ic_add" />
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/addGoalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/tabIndicatorColor"
+            android:src="@drawable/ic_add" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Remove Entry"
+        android:textColor="@color/tabTextColor"
+        android:text="Remove Goal"
         android:layout_gravity="start"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
         android:textSize="18sp" />
 
-    <android.support.v7.widget.AppCompatImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_clear"
-        android:background="@color/tabIndicatorColor"
-        android:layout_gravity="start"/>
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/removeGoalButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/tabIndicatorColor"
+            android:src="@drawable/ic_clear" />
+    </LinearLayout>
 
-
-    <ListView
-        android:id="@+id/goals_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tabTextColor"/>
 
 </LinearLayout>
