@@ -4,6 +4,8 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
@@ -16,10 +18,11 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabLayout_id);
         viewPager = findViewById(R.id.viewPager_id);
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.AddFragment(new FragmentGoals(), "Goals");
-        viewPagerAdapter.AddFragment(new FragmentProgress(), "Progress");
-        viewPagerAdapter.AddFragment(new FragmentLogging(), "Logging");
+        viewPagerAdapter.AddFragment(new FragmentGoals(), "Assignments");
+        viewPagerAdapter.AddFragment(new FragmentProgress(), "Calendar");
+        viewPagerAdapter.AddFragment(new FragmentLogging(), "Notes");
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
+
 }

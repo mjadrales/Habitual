@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="300dp"
     android:background="@color/colorPrimaryDark"
@@ -8,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Goals"
+        android:text="My Assignments"
         android:textColor="@color/tabTextColor"
         android:textSize="30dp"
         android:textStyle="bold" />
@@ -19,14 +20,14 @@
         android:padding="15px"
         android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/tabTextColor"
-        android:text="Add New Goal"
-        android:paddingRight="10dp"
-        android:textSize="18sp" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="Add New Assignment"
+            android:textColor="@color/tabTextColor"
+            android:textSize="18sp" />
 
         <android.support.v7.widget.AppCompatImageButton
             android:id="@+id/addGoalButton"
@@ -36,15 +37,15 @@
             android:background="@color/tabIndicatorColor"
             android:src="@drawable/ic_add" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/tabTextColor"
-        android:text="Remove Goal"
-        android:layout_gravity="start"
-        android:paddingLeft="20dp"
-        android:paddingRight="10dp"
-        android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:text="Remove Assignment"
+            android:textColor="@color/tabTextColor"
+            android:textSize="18sp" />
 
         <android.support.v7.widget.AppCompatImageButton
             android:id="@+id/removeGoalButton"
@@ -56,8 +57,11 @@
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/tabTextColor"/>
+        android:background="@color/tabTextColor"
+        android:padding="4dp"
+        android:scrollbars="vertical"/>
 
 </LinearLayout>
