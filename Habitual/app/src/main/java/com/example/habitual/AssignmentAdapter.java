@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -22,8 +21,8 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.As
             super(itemView);
             mImageView = itemView.findViewById(R.id.imageView);
             mCourse = itemView.findViewById(R.id.courseName);
-            mTitle = itemView.findViewById(R.id.goalTitle);
-            mDueDate = itemView.findViewById(R.id.dueDate);
+            mTitle = itemView.findViewById(R.id.title);
+            mDueDate = itemView.findViewById(R.id.date);
         }
     }
 
@@ -43,9 +42,9 @@ public class AssignmentAdapter extends RecyclerView.Adapter<AssignmentAdapter.As
     public void onBindViewHolder(@NonNull AssignmentViewHolder assignmentViewHolder, int i) {
         Assignment currentItem = assignmentList.get(i);
         assignmentViewHolder.mImageView.setImageResource(currentItem.getImageResource());
-        /*assignmentViewHolder.mCourse.setText(currentItem.getCourse());
+        assignmentViewHolder.mCourse.setText(currentItem.getCourse());
         assignmentViewHolder.mTitle.setText(currentItem.getTitle());
-        assignmentViewHolder.mDueDate.setText(currentItem.getDueDate());*/
+        assignmentViewHolder.mDueDate.setText(currentItem.getDueDate());
     }
 
     @Override

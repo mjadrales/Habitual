@@ -47,16 +47,16 @@ public class AddNewGoal extends AppCompatDialogFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        /*try {
+        try {
             listener = (AddNewGoalListener) context;
         } catch (ClassCastException e) {
             throw new ClassCastException(context.toString() + "must implement AddNewGoalListener");
-        }*/
+        }
     }
 
     public interface AddNewGoalListener
     {
-        //void applyText(String title, String desc, String dueDate);
+        void applyText(String title, String desc, String dueDate);
     }
 
 }
