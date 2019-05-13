@@ -21,9 +21,10 @@
         android:orientation="horizontal">
 
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/addReminderButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add a reminder"/>
+            android:text="Add a reminder" />
     </LinearLayout>
 
     <CalendarView
